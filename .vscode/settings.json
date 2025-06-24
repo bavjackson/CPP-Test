@@ -1,0 +1,20 @@
+{
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "scm.autoReveal": false,
+  "search.exclude": {
+    "*": true
+  },
+  "files.watcherExclude": {
+    "*": true
+  },
+  "workbench.localHistory.exclude": {
+    "*": true
+  },
+  "explorer.excludeGitIgnore": false,
+  "search.useIgnoreFiles": false,
+  "explorer.fileNesting.enabled": true,
+  "python.analysis.exclude": ["**/.pytest_cache"]
+}
+
