@@ -1,5 +1,3 @@
-set(CMAKE_C_COMPILER C:\ProgramData\mingw64\mingw64\bin\gcc.exe)
-set(CMAKE_CPP_COMPILER C:\ProgramData\mingw64\mingw64\bin\g++.exe)
 cmake_minimum_required(VERSION 3.10)
 project(hello_project VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
