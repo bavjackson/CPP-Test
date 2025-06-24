@@ -1,185 +1,228 @@
 {
   "languages": [
     {
-      "language": "python",
-      "version": "3.12",
-      "testrunner": "pytest"
+      "language": "cpp"
     }
   ],
+
   "modules": [
     {
-      "name": "Hello World",
-      "dir": "HelloWorld",
+      "name": "Number",
+      "dir": "Number",
       "exercises": [
         {
-          "name": "Hello World",
-          "dir": "hello_world",
-          "initialFiles": ["main.py"],
-          "tests": [
-            {
-              "test": "test_hello_world",
-              "name": "Print 'Hello World!'",
-              "description": "Use the print() function to dislpay 'Hello World!' in the Output window"
-            }
+          "name": "My Number",
+          "dir": "step1_mynumber",
+          "initialFiles": ["main.cpp"],
+          "options": [
+            { "language": "cpp", "testTarget": "step1_mynumber_tests" }
           ],
           "scripts": [
             {
-              "language": "python",
-              "script": "main.py",
-              "args": []
-            }
-          ]
-        },
-        {
-          "name": "Comments",
-          "dir": "comments",
-          "initialFiles": ["main.py"],
-          "tests": [
-            {
-              "test": "test_comment",
-              "name": "Comment out the print statement",
-              "description": "Use a comment to prevent the print() function from writing 'Hello World!' to the Output window"
+              "language": "cpp",
+              "target": "step1_mynumber"
             }
           ],
-          "scripts": [
-            {
-              "language": "python",
-              "script": "main.py",
-              "args": []
-            }
-          ]
-        },
-        {
-          "name": "Variables",
-          "dir": "variables",
-          "initialFiles": ["main.py"],
           "tests": [
             {
-              "test": "test_variables",
-              "name": "Assign subjects to afternoon and evening classes",
-              "description": "Assign the lesson variable to represent different subjects for the afternoon and evening classes"
-            }
-          ],
-          "scripts": [
-            {
-              "language": "python",
-              "script": "main.py",
-              "args": []
-            }
-          ]
-        },
-        {
-          "name": "Errors",
-          "dir": "errors",
-          "initialFiles": ["main.py"],
-          "tests": [
-            {
-              "test": "test_errors",
-              "name": "Debug the code to allow the strings to print to Output",
-              "description": "Fix the code to stop the NameError and SyntaxError from occuring, allowing the text to display in the Output window"
-            }
-          ],
-          "scripts": [
-            {
-              "language": "python",
-              "script": "main.py",
-              "args": []
-            }
-          ]
-        },
-        {
-          "name": "Numbers",
-          "dir": "numbers_1",
-          "initialFiles": ["main.py"],
-          "tests": [
-            {
-              "test": "test_integers",
-              "name": "Assign the correct integers to the variables",
-              "description": "Assign the current_year, hours_in_a_day and days_in_a_week variables with the correct integers"
+              "test": "MyNumberTest.Step1Constructors",
+              "name": "Constructor",
+              "description": "Constructor"
             },
             {
-              "test": "test_floats",
-              "name": "Assign the correct floats to the variables",
-              "description": "Assign the pi_to_three_places and probability_of_heads_in_coin_flip variables with the correct floats"
+              "test": "MyNumberTest.Step1TriviallyDestructable",
+              "name": "Trivially Destructable",
+              "description": "Destructable"
             },
             {
-              "test": "test_print_year",
-              "name": "Print the current_year variable",
-              "description": "Use the print function to print the current year variable to Output"
-            }
-          ],
-          "scripts": [
-            {
-              "language": "python",
-              "script": "main.py",
-              "args": []
+              "test": "MyNumberTest.Step1ConstCallable",
+              "name": "Const Callable",
+              "description": "Const callable"
             }
           ]
         },
         {
-          "name": "Calculations, Part 1",
-          "dir": "calculations_1",
-          "initialFiles": ["main.py"],
+          "name": "Destructor",
+          "dir": "step2_destructor",
+          "initialFiles": ["main.cpp"],
+          "options": [
+            { "language": "cpp", "testTarget": "step2_destructor_tests" }
+          ],
           "tests": [
             {
-              "test": "test_multiplication",
-              "name": "Calculate the number of hours in a week",
-              "description": "Calculate the number of hours in a week by multiplying together the hours_in_a_day and days_in_a_week variables"
+              "test": "MyNumberTest.Step2CheckConstructors",
+              "name": "Check Constructors",
+              "description": "Check Constructor"
             },
             {
-              "test": "test_division",
-              "name": "Calculate the diameter of a circle",
-              "description": "Calculate the diameter of the circle by dividing the circle_circumference variable by the pi_to_three_places variable"
-            }
-          ],
-          "scripts": [
+              "test": "MyNumberTest.Step2NotTriviallyDestructable",
+              "name": "Not Trivially Destructable",
+              "description": "Not Trivially Destructable"
+            },
             {
-              "language": "python",
-              "script": "main.py",
-              "args": []
+              "test": "MyNumberTest.Step2NotTriviallyCopyConstructible",
+              "name": "Not Trivially Copy Constructable",
+              "description": "Not trivially copy constructable"
             }
           ]
         },
         {
-          "name": "Calculations, Part 2",
-          "dir": "calculations_2",
-          "initialFiles": ["main.py"],
+          "name": "Assignment",
+          "dir": "step3_assignment",
+          "initialFiles": ["main.cpp"],
+          "options": [
+            { "language": "cpp", "testTarget": "step3_assignment_tests" }
+          ],
           "tests": [
             {
-              "test": "test_exponent",
-              "name": "Calculate the required number of tiles",
-              "description": "Calculate the number of tiles needed to fully tile the square room and assign it to the tiles_required variable"
+              "test": "MyNumberTest.Step3CheckConstructors",
+              "name": "Check Constructors",
+              "description": "Check Constructor"
             },
             {
-              "test": "test_modulo",
-              "name": "Calculate the number of leftover tiles",
-              "description": "Calculate how many tiles will be left over if you buy the minimum number of tile packs required for the room and assign it to the leftover_tiles variable"
-            }
-          ],
-          "scripts": [
+              "test": "MyNumberTest.Step3NotTriviallyDestructable",
+              "name": "Not Trivially Destructable",
+              "description": "Not Trivially Destructable"
+            },
             {
-              "language": "python",
-              "script": "main.py",
-              "args": []
+              "test": "MyNumberTest.Step3NotTriviallyCopyConstructible",
+              "name": "Not Trivially Copy Constructable",
+              "description": "Not trivially copy constructable"
+            },
+            {
+              "test": "MyNumberTest.Step3NotTriviallyCopyAssignable",
+              "name": "Not Trivially Copy Assignable",
+              "description": "Not trivially copy assignable"
             }
           ]
         },
         {
-          "name": "Summary",
-          "dir": "summary",
-          "initialFiles": ["main.py"],
+          "name": "Plus Operator",
+          "dir": "step4_plus_operator",
+          "initialFiles": ["main.cpp"],
+          "options": [
+            { "language": "cpp", "testTarget": "step4_plus_operator_tests" }
+          ],
           "tests": [
             {
-              "test": "test_summary",
-              "name": "Provide a proof of the Riemann hypothesis",
-              "description": "Use the print function to display a complete proof of the Riemann hypothesis"
-            }
-          ],
-          "scripts": [
+              "test": "MyNumberTest.Step4CheckConstructors",
+              "name": "Check Constructors",
+              "description": "Check Constructor"
+            },
             {
-              "language": "python",
-              "script": "ee.py",
-              "args": []
+              "test": "MyNumberTest.Step4NotTriviallyDestructable",
+              "name": "Not Trivially Destructable",
+              "description": "Not Trivially Destructable"
+            },
+            {
+              "test": "MyNumberTest.Step4NotTriviallyCopyConstructible",
+              "name": "Not Trivially Copy Constructable",
+              "description": "Not trivially copy constructable"
+            },
+            {
+              "test": "MyNumberTest.Step4NotTriviallyCopyAssignable",
+              "name": "Not Trivially Copy Assignable",
+              "description": "Not trivially copy assignable"
+            }
+          ]
+        },
+        {
+          "name": "Efficiency",
+          "dir": "step5_efficiency",
+          "initialFiles": ["main.cpp"],
+          "options": [
+            { "language": "cpp", "testTarget": "step5_efficiency_tests" }
+          ],
+          "tests": [
+            {
+              "test": "MyNumberTest.Step5CheckConstructors",
+              "name": "Check Constructors",
+              "description": "Check Constructor"
+            },
+            {
+              "test": "MyNumberTest.Step5NotTriviallyDestructable",
+              "name": "Not Trivially Destructable",
+              "description": "Not Trivially Destructable"
+            },
+            {
+              "test": "MyNumberTest.Step5NotTriviallyCopyConstructible",
+              "name": "Not Trivially Copy Constructable",
+              "description": "Not trivially copy constructable"
+            },
+            {
+              "test": "MyNumberTest.Step5NotThrowMoveConstructible",
+              "name": "Not Throw Move Constructible",
+              "description": "Not throw move constructible"
+            },
+            {
+              "test": "MyNumberTest.Step5NotTriviallyCopyAssignable",
+              "name": "Not Trivially Copy Assignable",
+              "description": "Not trivially copy assignable"
+            },
+            {
+              "test": "MyNumberTest.Step5NotThrowMoveAssignable",
+              "name": "Not Trivially Copy Assignable",
+              "description": "Not trivially copy assignable"
+            },
+            {
+              "test": "MyNumberTest.Step5ConstCallable",
+              "name": "Const Callable",
+              "description": "Const callable"
+            }
+          ]
+        },
+        {
+          "name": "Type Conversion",
+          "dir": "step6_type_conversion",
+          "initialFiles": ["main.cpp"],
+          "options": [
+            { "language": "cpp", "testTarget": "step6_type_conversion_tests" }
+          ],
+          "tests": [
+            {
+              "test": "MyNumberTest.Step6CheckConstructors",
+              "name": "Check Constructors",
+              "description": "Check Constructor"
+            },
+            {
+              "test": "MyNumberTest.Step6NotTriviallyDestructable",
+              "name": "Not Trivially Destructable",
+              "description": "Not Trivially Destructable"
+            },
+            {
+              "test": "MyNumberTest.Step6NotTriviallyCopyConstructible",
+              "name": "Not Trivially Copy Constructable",
+              "description": "Not trivially copy constructable"
+            },
+            {
+              "test": "MyNumberTest.Step6NotThrowMoveConstructible",
+              "name": "Not Throw Move Constructible",
+              "description": "Not throw move constructible"
+            },
+            {
+              "test": "MyNumberTest.Step6NotTriviallyCopyAssignable",
+              "name": "Not Trivially Copy Assignable",
+              "description": "Not trivially copy assignable"
+            },
+            {
+              "test": "MyNumberTest.Step6NotThrowMoveAssignable",
+              "name": "Not Trivially Copy Assignable",
+              "description": "Not trivially copy assignable"
+            },
+            {
+              "test": "MyNumberTest.Step6ConstCallable",
+              "name": "Const Callable",
+              "description": "Const callable"
+            },
+            {
+              "test": "MyNumberTest.Step6ConstCallableOperator",
+              "name": "Const Callable Operator",
+              "description": "Const callable operator"
+            },
+            {
+              "test": "MyNumberTest.Step6TypeConversion",
+              "name": "Type Conversion",
+              "description": "Type conversion"
             }
           ]
         }
